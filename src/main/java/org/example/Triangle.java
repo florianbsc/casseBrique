@@ -1,55 +1,73 @@
 package org.example;
 
-public class Triangle  {
+import java.awt.*;
 
-   // attibus du triangle = composant
-    private int nbOfSidesTriange;
-    private String colorTriangle;
-    private String nameTriangle;
-    private  int angleTriangleA;
-    private  int angleTriangleB;
-    private  int angleTriangleC;
+// class un Objet créé
+public class Triangle {
 
-    public Triangle(String colorTriangle, String nameTriangle) {
-        this.nbOfSidesTriange = 3;
-        this.colorTriangle = colorTriangle;
-        this.nameTriangle = nameTriangle;
-        this.angleTriangleA = angleTriangleA;
-        this.angleTriangleB = angleTriangleB;
-        this.angleTriangleC = angleTriangleC;
+    // Attributs du triangle
+    private String color;
+    private String name;
+    private int longueurCote = 2;
+    private int nbCote;
 
+//    private int base;
+//    private int hauteur;
+
+    // Constructeur
+    public Triangle(String name, String color, int nbCote, int longueurCote) {
+        this.name = name;
+        this.color = color;
+        this.nbCote = nbCote;
+        this.longueurCote = longueurCote;
     }
 
-    // recupere les caracteristique de nbOfSide et les renvoient a la methode displayInfo
-//    Un getter est une méthode qui permet de récupérer la valeur d'un attribut privé d'une classe.
-//    Cela permet de rendre un attribut accessible en lecture, tout en le gardant protégé
-    public int getNbOfSides() {
-        return nbOfSidesTriange;
-    }
-    // recupere la valeur de nbOfSide pour les afficher dans la console
-//    public void setNbOfSides(int nbOfSides) {
-//        this.nbOfSides = nbOfSides;
-//    }
+    // Getters recuper les info
 
     public String getColor() {
-        return colorTriangle;
+        return color;
     }
-//    public void setColor(String colorTriangle) {
-//        this.colorTriangle = colorTriangle;
-//    }
+
+    //    Setters renvoi une info ou acction
+    public void setColor(String color) {
+        this.color = color;
+    }
 
     public String getName() {
-        return nameTriangle;
+        return name;
     }
-//    public void setName(String nameTriangle) {
-//        this.nameTriangle = nameTriangle;
-//    }
 
+    public void setName(String name) {
+        this.name = name;
+    }
 
-    //la methode pour afficher les infos
+    public int getLongueurCote() {
+        return longueurCote;
+    }
+
+    public int getNbCote() {
+        return nbCote;
+    }
+    public void setNbCote(int nbCote) {
+        this.nbCote = nbCote;
+    }
+
+    public void setLongueurCote(int longueurCote) {
+        this.longueurCote = longueurCote;
+    }
+
+    public double getPerimeter() {
+        return longueurCote * 3;
+    }
+
+    public double getAire() {
+        return (Math.sqrt(3) / 4) * (longueurCote * longueurCote);
+    }
+
+    // Méthode = fonction ou action
+    //    methode d'affichage
     public void displayInfo() {
-        System.out.println("Nombre de  cotés: " + nbOfSidesTriange + ", de couleur: " + colorTriangle + ", de nom: " + nameTriangle);
+//        instruction de la methode
+        System.out.println("\n" + "Nom: " + name + ", Couleur: " + color + ", permiètre : " + getPerimeter() + " cm, aire: " + (String.format("%.3f", getAire())) + " cm2 \n");
     }
-
 }
-
