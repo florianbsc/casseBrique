@@ -4,19 +4,19 @@ public class Triangle  {
 
    // attibus du triangle = composant
     private int nbOfSidesTriange;
-    private String colorTriangle;
-    private String nameTriangle;
-    private  int angleTriangleA;
-    private  int angleTriangleB;
-    private  int angleTriangleC;
+    private String color;
+    private String name;
+    private  int angleA;
+    private  int angleB;
+    private  int angleC;
 
-    public Triangle(String colorTriangle, String nameTriangle) {
+    public Triangle(String color, String name) {
         this.nbOfSidesTriange = 3;
-        this.colorTriangle = colorTriangle;
-        this.nameTriangle = nameTriangle;
-        this.angleTriangleA = angleTriangleA;
-        this.angleTriangleB = angleTriangleB;
-        this.angleTriangleC = angleTriangleC;
+        this.color = color;
+        this.name = name;
+        this.angleA = angleA;
+        this.angleB = angleB;
+        this.angleC = angleC;
 
     }
 
@@ -32,23 +32,23 @@ public class Triangle  {
 //    }
 
     public String getColor() {
-        return colorTriangle;
+        return color;
     }
-//    public void setColor(String colorTriangle) {
-//        this.colorTriangle = colorTriangle;
+//    public void setColor(String color) {
+//        this.color = color;
 //    }
 
     public String getName() {
-        return nameTriangle;
+        return name;
     }
-//    public void setName(String nameTriangle) {
-//        this.nameTriangle = nameTriangle;
+//    public void setName(String name) {
+//        this.name = name;
 //    }
 
 
     //la methode pour afficher les infos
     public void displayInfo() {
-        System.out.println("Nombre de  cotés: " + nbOfSidesTriange + ", de couleur: " + colorTriangle + ", de nom: " + nameTriangle);
+        System.out.println("Nombre de  cotés: " + nbOfSidesTriange + ", de couleur: " + color + ", de nom: " + name);
     }
 
 }

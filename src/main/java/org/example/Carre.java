@@ -2,29 +2,29 @@ package org.example;
 
 public class Carre {
 //  attribut du carré
-    private String nomCarre;
-    private int nbOfSidesCarre;
+    private String nom;
+    private int nbOfSides;
     private int longueurCote;
-    private String couleurCarre;
+    private String couleur;
 
-    public Carre(String nomCarre,  int longueurCote, String couleurCarre) {
-        this.nomCarre = nomCarre;
-        this.nbOfSidesCarre = 4;
+    public Carre(String nom,  int longueurCote, String couleur) {
+        this.nom = nom;
+        this.nbOfSides = 4;
         this.longueurCote = longueurCote;
-        this.couleurCarre = couleurCarre;
+        this.couleur = couleur;
     }
-    public String getNomCarre() {
-        return nomCarre;
+    public String getNom() {
+        return nom;
     }
-    public void setNomCarre(String nomCarre) {
-        this.nomCarre = nomCarre;
+    public void setNom(String nom) {
+        this.nom = nom;
     }
 
-    public int getNbOfSidesCarre() {
-        return nbOfSidesCarre;
+    public int getNbOfSides() {
+        return nbOfSides;
     }
-    public void setNbOfSidesCarre(int nbOfSidesCarre){
-        this.nbOfSidesCarre = nbOfSidesCarre;
+    public void setNbOfSides(int nbOfSides){
+        this.nbOfSides = nbOfSides;
     }
 
     public int getLongueurCote() {
@@ -34,16 +34,16 @@ public class Carre {
         this.longueurCote = longueurCote;
     }
 
-    public String getCouleurCarre() {
-        return couleurCarre;
+    public String getCouleur() {
+        return couleur;
     }
 
-    public void setCouleurCarre(String couleurCarre) {
-        this.couleurCarre = couleurCarre;
+    public void setCouleur(String couleur) {
+        this.couleur = couleur;
     }
 
     public void displayInfoCarre() {
-        System.out.println("nom du carre est :" + nomCarre + ", il à " + nbOfSidesCarre + " cotés de " + longueurCote + "cm et est de couleur " + couleurCarre );
+        System.out.println("nom du carre est :" + nom + ", il à " + nbOfSides + " cotés de " + longueurCote + "cm et est de couleur " + couleur );
 
     }
 
