@@ -1,6 +1,8 @@
 package org.example;
 
-public class Triangle  {
+import java.awt.*;
+
+public class Triangle extends Frame {
 
    // attibus du triangle = composant
     private int nbCote;
@@ -11,7 +13,9 @@ public class Triangle  {
 //    private  int angleB;
 //    private  int angleC;
 
-    public Triangle(String name, String color, double longCote) {
+    public Triangle() {}
+
+    public  Triangle  (String name, String color, double longCote) {
         this.nbCote = 3;
         this.color = color;
         this.name = name;

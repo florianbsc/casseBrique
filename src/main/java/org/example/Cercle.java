@@ -1,10 +1,12 @@
 package org.example;
 
-public class Cercle {
+public class Cercle extends FormeGeo {
      private double rayon = 2.5;
      double PI= Math.PI;
      public String name;
      public String couleur;
+
+     public Cercle() {}
 
     public Cercle(String name, double rayon, String couleur ) {
         this.rayon = rayon;

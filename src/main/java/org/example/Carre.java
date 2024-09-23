@@ -1,6 +1,6 @@
 package org.example;
 
-public class Carre {
+public class Carre extends FormeGeo{
 //  attribut du carré
     private String nom;
     private int nbOfSides;

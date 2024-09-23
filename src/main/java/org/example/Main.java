@@ -2,6 +2,8 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
+
+
         Triangle triangle1 = new Triangle("Tri 1", "bleu", 4);
         Triangle triangle2 = new Triangle("Tri 2", "rouge", 3.2);
         Carre carre1 = new Carre("Carre 1", 5, "vert");
