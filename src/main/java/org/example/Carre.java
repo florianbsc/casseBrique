@@ -42,8 +42,16 @@ public class Carre {
         this.couleur = couleur;
     }
 
+    public double getPerimetre() {
+        return longueurCote*4;
+    }
+    public double getArea() {
+        return longueurCote*longueurCote;
+    }
+
     public void displayInfoCarre() {
-        System.out.println("nom du carre est :" + nom + ", il à " + nbOfSides + " cotés de " + longueurCote + "cm et est de couleur " + couleur );
+        System.out.println("Nom :" + nom + ", Nb coté : " + nbOfSides + " Longueur Coté : " + longueurCote + "cm, Couleur : " + couleur );
+        System.out.println("le perimetre : " + getPerimetre() + " cm et l'air : " + getArea() + " cm2"+ "\n");
 
     }
 
