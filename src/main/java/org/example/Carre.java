@@ -23,6 +23,7 @@ public class Carre {
     public int getNbOfSides() {
         return nbOfSides;
     }
+
     public void setNbOfSides(int nbOfSides){
         this.nbOfSides = nbOfSides;
     }
@@ -30,6 +31,7 @@ public class Carre {
     public int getLongueurCote() {
         return longueurCote;
     }
+
     public void setLongueurCote (int longueurCote) {
         this.longueurCote = longueurCote;
     }
@@ -49,7 +51,7 @@ public class Carre {
         return longueurCote*longueurCote;
     }
 
-    public void displayInfoCarre() {
+    public void displayCarre() {
         System.out.println("Nom :" + nom + ", Nb coté : " + nbOfSides + " Longueur Coté : " + longueurCote + "cm, Couleur : " + couleur );
         System.out.println("le perimetre : " + getPerimetre() + " cm et l'air : " + getArea() + " cm2"+ "\n");
 

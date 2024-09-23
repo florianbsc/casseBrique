@@ -11,8 +11,8 @@ public class Main {
 
         triangle1.displayTriangle();
         triangle2.displayTriangle();
-        carre1.displayInfoCarre();
-        carre2.displayInfoCarre();
+        carre1.displayCarre();
+        carre2.displayCarre();
         cercle1.displayCercle();
         cercle2.displayCercle();
     }
