@@ -2,16 +2,13 @@ package org.example;
 
 public class Cercle extends FormeGeo {
      private double rayon = 2.5;
-     double PI= Math.PI;
      public String name;
-     public String couleur;
 
      public Cercle() {}
 
-    public Cercle(String name, double rayon, String couleur ) {
+    public Cercle(String name, double rayon) {
         this.rayon = rayon;
         this.name = name;
-        this.couleur = couleur;
     }
 
     public double getRayon() {
@@ -20,21 +17,19 @@ public class Cercle extends FormeGeo {
     public void setRayon(double rayon) {
         this.rayon = rayon;
     }
-    public double getAir() {
+    public double calculeAire() {
 
-        return PI * (rayon * rayon);
+        return Math.PI * (rayon * rayon);
     }
 
-    public double getPerimetre() {
+    public double calculePerimetre() {
 
-        return 2 * PI * rayon;
+        return 2 * Math.PI * rayon;
     }
 
-
-
-    public void displayCercle () {
+    public void displayForme () {
         System.out.println("cercle de rayon: " + this.rayon);
-        System.out.println("Air Cercle: " + getAir());
-        System.out.println("Perimetre Cercle: " + getPerimetre() + "\n");
+        System.out.println("Air Cercle: " + calculeAire());
+        System.out.println("Perimetre Cercle: " + calculePerimetre() + "\n");
     }
 }

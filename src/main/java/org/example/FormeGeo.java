@@ -1,19 +1,18 @@
 package org.example;
 
-public class FormeGeo {
+public abstract class FormeGeo {
 
     public FormeGeo() {}
 
-    public void calculePerimetre() {
-
-    }
-    public void calculeAire() {
-
-    }
+    protected String name;
+    public abstract double calculePerimetre() ;
+    public abstract double calculeAire() ;
 
     public void displayForme() {}
 
-
+    public String getName() {
+        return name;
+    }
 
 }
 
