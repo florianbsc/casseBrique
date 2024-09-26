@@ -9,10 +9,14 @@ public class Niveau {
 //    il stock les forme créé
 
     private List<FormeGeo> formes ;
+    private int nbFormes;
 
     public Niveau() {
+//        this.x = x;
+//        this.y = y;
         this.formes = new ArrayList<FormeGeo>();
     }
+
 //    Creat une forme au niveau
     public void addForme(FormeGeo forme) {
         formes.add(forme);

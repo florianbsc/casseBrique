@@ -6,7 +6,7 @@ public class Triangle extends FormeGeo {
     private double side =3;
 
     public  Triangle  (double side) {
-       super("Triangle", Color.MAGENTA);
+       super("Triangle", Color.MAGENTA, 4, 4);
        this.side =side;
     }
 

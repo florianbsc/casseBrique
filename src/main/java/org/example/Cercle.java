@@ -6,7 +6,7 @@ public class Cercle extends FormeGeo {
     private double rayon = 2.5;
 
     public Cercle(double rayon) {
-         super("Cercle", Color.GREEN);
+         super("Cercle", Color.GREEN, 0, 0);
         this.rayon = rayon;
     }
 

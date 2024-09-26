@@ -19,7 +19,7 @@ public class Carre extends FormeGeo{
     private Side side; // Un carré est composé d'un seul côté (longueur du côté identique pour tous)
     // Constructeur pour initialiser le carré avec un côté
     public Carre(double side) {
-        super("Carre", Color.CYAN);  // Appel au constructeur parent pour initialiser le nom et la couleur
+        super("Carre", Color.CYAN, 8, 8);  // Appel au constructeur parent pour initialiser le nom et la couleur
         this.side = new Side(side); // Composition : Un carré contient un côté
     }
 
