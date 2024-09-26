@@ -1,64 +1,43 @@
 package org.example;
+import java.awt.*;
 
 //polymorphisme
+// Classe représentant un côté
 class Side {
-    private double sideLongueur;
+    private double side;
 
-    public Side (double sideLongueur) {
-        this.sideLongueur = sideLongueur;
+    public Side(double side) {
+        this.side = side;
     }
-
-    public double getSideLongueur() {
-    return sideLongueur;
-}
-
-    public void setSideLongueur (double sideLongueur) {
-    this.sideLongueur = sideLongueur;
-}
-
+    public double getside() {
+        return side;
+    }
 }
 
 public class Carre extends FormeGeo{
 //  attribut du carré
-
-//    private double sideLongueur;
-
     private Side side; // Un carré est composé d'un seul côté (longueur du côté identique pour tous)
-
     // Constructeur pour initialiser le carré avec un côté
-    public Carre(String name,  double sideLongueur) {
-        this.name = "carre";
-//        this.sideLongueur = sideLongueur;
-        this.side = new Side(sideLongueur); // Composition : Un carré contient un côté
+    public Carre(double side) {
+        super("Carre", Color.CYAN);  // Appel au constructeur parent pour initialiser le nom et la couleur
+        this.side = new Side(side); // Composition : Un carré contient un côté
     }
 
 //    methode
-    public String getName() {
-        return name;
-    }
-
-    public double getSideLongueur() { return sideLongueur; }
-
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-
+    @Override
     public double calculePerimetre() {
-        double longueur = side.getSideLongueur(); // Récupérer la longueur du côté
-//        double longueur = side; // Récupérer la longueur du côté
-
-        return longueur*4;
+        return side.getside()*4; // Récupérer la longueur du côté
     }
 
     // Méthode pour calculer l'aire du carré
-    public double calculeAire() {
-        return Math.pow(2, side.getSideLongueur()); // Aire = côté * côté
+    @Override
+    public double calculeAire () {
+        return Math.pow( side.getside(), 2); // Aire = côté * côté
     }
 
-    public void displayForme() {
-        System.out.println("Nom :" + name  + ", Longueur Coté : " + side.getSideLongueur() );
+    @Override
+    public void displayForme () {
+        System.out.println("Nom :" + name  + ", Longueur Coté : " + side.getside() + " , Couleur : "+ getCouleur());
         System.out.println("le perimetre : " + calculePerimetre() + " cm et l'air : " + calculeAire() + " cm2"+ "\n");
 
     }

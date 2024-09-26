@@ -1,39 +1,61 @@
 package org.example;
 import java.util.ArrayList;
+import java.util.List;
 
+// mon interface
 public class Niveau {
-    private ArrayList<FormeGeo> formeGeos = new ArrayList<>();
 
-    public Niveau() {}
+//    instantie un tableau lie a la calss FormeGeo
+//    il stock les forme créé
 
-    public ArrayList<FormeGeo> getFormeGeos() {
-        return formeGeos;
+    private List<FormeGeo> formes ;
+
+    public Niveau() {
+        this.formes = new ArrayList<FormeGeo>();
+    }
+//    Creat une forme au niveau
+    public void addForme(FormeGeo forme) {
+        formes.add(forme);
+    }
+//
+//    // Mettre à jour une forme
+//    public void editForme(int index, FormeGeo nouvelleForme) {
+//        if (index >= 0 && index < formes.size()) {
+//            formes.set(index, nouvelleForme); // MAJ la forme à l'index donné
+//        }
+//    }
+//
+//    //    Delete
+//    public void deleteForme(FormeGeo forme) {
+//        formes.remove(forme);
+//    }
+
+//    Addition de toute les aires des formes
+    public double caculerAireTotale() {
+        double aireTotale = 0;
+        for (FormeGeo forme : formes) {
+            aireTotale += forme.calculeAire();
+        }
+        return aireTotale;
     }
 
-    //    CRUD ??
+//    Addition de toute les perimetres des formes
+    public double calculerPerimetreTotale() {
+        double perimetreTotale = 0;
+        for (FormeGeo forme : formes) {
+            perimetreTotale += forme.calculePerimetre();
+        }
+        return perimetreTotale;
+    }
 
-    public void setFormeGeos(ArrayList<FormeGeo> formeGeos) {
-        this.formeGeos = formeGeos;
+    public void dispayNiveau() {
+        for (FormeGeo forme : formes) {  // prend chaque forme du tableau
+            forme.displayForme();
+// Affiche les totaux
+         }
+        System.out.println("Aire totale : " + caculerAireTotale() + " cm²");
+        System.out.println("Périmètre total : " + calculerPerimetreTotale() + " cm");
+
     }
-    
-    public void addFormeGeo(FormeGeo formeGeo) {
-        formeGeos.add(formeGeo);
-        
-    }
-    public void editFormeGeo (FormeGeo formeGeo) {
-        int index = formeGeos.indexOf(formeGeo);
-    } 
-    
-    public void removeFormeGeo (FormeGeo formeGeo) {
-        formeGeos.remove(formeGeo);
-    }
-    public double allAire( FormeGeo getAir) {
-        double  totalAire = 0;
-        return totalAire;
-    }
-    
-    public double allPermietre (FormeGeo getPermietre) {
-        double  totalPermietre = 0;
-        return totalPermietre;
-    }
+
 }

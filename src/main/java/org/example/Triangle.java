@@ -3,36 +3,28 @@ package org.example;
 import java.awt.*;
 
 public class Triangle extends FormeGeo {
+    private double side =3;
 
-   // attibus du triangle = composant
-
-    public Triangle() {}
-
-    public  Triangle  (double sideLongueur) {
-        this.name = "Triangle";
-        this.sideLongueur =sideLongueur;
-    }
-    public String getName() {
-        return name;
+    public  Triangle  (double side) {
+       super("Triangle", Color.MAGENTA);
+       this.side =side;
     }
 
-    public double getSideLongueur() {
-        return sideLongueur;
-    }
-
+    @Override
     public double calculePerimetre () {
-        return 3 * sideLongueur;
+        return 3 * side; // Périmètre = 3 * côté (triangle équilatéral)
     }
 
+    @Override
     public double calculeAire() {
-        return ((Math.sqrt(3)/4)*sideLongueur);
+        return (Math.sqrt(3) / 4) * Math.pow(side, 2); // Aire = (√3 / 4) * côté²
     }
 
     //la methode pour afficher les infos
+    @Override
     public void displayForme() {
-        System.out.println("Nom : " +name + " longuere de  cotés: " + sideLongueur + " cm");
-        System.out.println("Perimetre: " + calculePerimetre() + " cm, Air : " + calculeAire() +" cm2" +  "\n");
+        System.out.println("Nom : " +name + " longuere de  cotés: " + side + " cm");
+        System.out.println("Perimetre: " + calculePerimetre() + " cm, Aire : " + calculeAire() +" cm2" +  "\n");
     }
-
 }
 

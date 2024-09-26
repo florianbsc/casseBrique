@@ -1,23 +1,28 @@
 package org.example;
 
+import java.awt.*;
+
 public abstract class FormeGeo {
+    protected Color couleur;
+    protected String name; // attribut commun a toutes les formes
+//    protected double sideLongueur;  // enlever car Cercle n'herite pas de cette attribut
 
-    public FormeGeo() {}
-
-    protected String name;
-    protected double sideLongueur;
+    public FormeGeo(String name, Color couleur) {
+        this.name = name;
+        this.couleur = couleur;
+    }
 
     public abstract double calculePerimetre() ;
     public abstract double calculeAire() ;
 
-   public double getSideLongueur() {
-       return sideLongueur;
-   }
-
-    public String getName() {
-        return name;
+//    public String getName() {
+//        return name;
+//    }
+    public Color getCouleur() {
+        return couleur;
     }
-    public void displayForme() {}
+
+    public abstract void displayForme() ;
 
 }
 
