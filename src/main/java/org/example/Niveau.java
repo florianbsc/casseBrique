@@ -17,6 +17,11 @@ public class Niveau {
         this.formes = new ArrayList<FormeGeo>();
     }
 
+//    recupere les formes du niveau
+    public List<FormeGeo> getForme() {
+        return formes;
+    }
+
 //    Creat une forme au niveau
     public void addForme(FormeGeo forme) {
         formes.add(forme);
@@ -29,10 +34,14 @@ public class Niveau {
 //        }
 //    }
 //
-//    //    Delete
-//    public void deleteForme(FormeGeo forme) {
-//        formes.remove(forme);
-//    }
+    //    Delete
+    public void deleteForme(FormeGeo forme) {
+        formes.remove(forme);
+    }
+
+    public void clearNiveau() {
+        formes.clear();
+    }
 
 //    Addition de toute les aires des formes
     public double caculerAireTotale() {
